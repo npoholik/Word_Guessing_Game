@@ -2,7 +2,7 @@ import random
 
 class SecretWord:
     __turns = 0
-    __word = ""
+    __word = ''
     __lost = 0
     __won = 0
 
@@ -11,10 +11,19 @@ class SecretWord:
         file=open("Dictionary.txt","r") # Read in files from text file
         file.seek(0)
         self.word_list = file.readlines() # Read all lines and store it in a list
-    
+
         selection = random.randint(0, len(self.word_list)-1) # Obtain a random index
         self.word = self.word_list[selection]  #Store word from random index
         self.turns = 8
+
+        self.hidden_word = ''
+        for i in range(0, len(self.word)):
+            self.hidden_word = self.hidden_word + str(' _ ')
+
+
+    #Method to print out current progress on word
+    def getHiddenWord(self):
+        return self.hidden_word
 
 
     # Method to handle a user guess
@@ -29,7 +38,7 @@ class SecretWord:
                 if self.turns == 0:
                     self.lost = 1
         
-        
+
 
     def getTurns(self):
         return self.turns

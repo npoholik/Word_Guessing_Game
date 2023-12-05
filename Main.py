@@ -5,6 +5,7 @@ from SecretWord import *
 test = SecretWord()
 
 while(True):
+    print("The hidden word is: " + test.getHiddenWord())
     print("Guess a character: ") 
     guess = input()
 
