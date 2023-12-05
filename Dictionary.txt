@@ -8,6 +8,6 @@ Dolphin
 Frog
 Panda
 Platypus
-T-rex
+TRex
 Meerkat
 Eagle
