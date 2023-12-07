@@ -1,4 +1,4 @@
-from SecretWord import *
+from SecretWord import SecretWord
 
 # Main.py
 
@@ -17,7 +17,7 @@ while( (not test.hasLost()) or (not test.hasWon()) ):
 
     if test.hasLost():
         print("You have lost...")
-        print("The word was " + test.getHiddenWord())
+        print("The word was " + test.getWord())
         break
     elif test.hasWon():
         print("YOU WIN!")
@@ -25,4 +25,3 @@ while( (not test.hasLost()) or (not test.hasWon()) ):
         break
 
     print(test.hasWon())
-

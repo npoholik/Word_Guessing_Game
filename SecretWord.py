@@ -52,6 +52,7 @@ class SecretWord:
 
         else:
             print("Incorrect Guess!")
+            self.__prev_guesses.append(user_guess.casefold())
             self.__fails += 1
         
 
@@ -77,3 +78,7 @@ class SecretWord:
     
     def hasLost(self):
         return self.__lost
+    
+
+    def getWord(self):
+        return self.__word
