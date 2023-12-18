@@ -21,7 +21,5 @@ while( (not test.hasLost()) or (not test.hasWon()) ):
         break
     elif test.hasWon():
         print("YOU WIN!")
-        print("You guessed " + test.getHiddenWord() + " with " + str(test.getFails()) + " wrong attempts")
+        print("You guessed " + test.getHiddenWord() + " with " + str(test.getFails()) + " wrong attempt(s)")
         break
-
-    print(test.hasWon())
